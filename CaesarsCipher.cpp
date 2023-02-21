@@ -1,5 +1,6 @@
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
+
 using namespace std;
 
 string encrypt(string text, int s) {
@@ -160,7 +161,7 @@ int main() {
    char prompt;
 
    //take the message as input
-   cout<<"Enter the message: ";
+   cout<<"\nEnter a message to encrypt: ";
    // issues accepting spaces with cin, thus using getline
    getline(cin, plain_text);
 
@@ -170,10 +171,10 @@ int main() {
    
    encrypted_text = encrypt(plain_text, shift);
 
-   cout << "Encrypted: " << encrypted_text << endl;
-   cout << "Decrypted: " << decrypt(encrypted_text, shift) << endl;
+   cout << "\nEncrypted: " << encrypted_text << endl;
+   cout << "\nDecrypted: " << decrypt(encrypted_text, shift) << endl;
 
-   cout << "Press y to get all possible solutions or any key to exit: ";
+   cout << "\nPress y to get all possible solutions or any key to exit: ";
    cin >> prompt;
 
    if (prompt == 'y' || prompt == 'Y') {
